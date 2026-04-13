@@ -26,12 +26,12 @@
     }
     body { font-family: 'DM Sans', sans-serif; background: var(--cafe-bg); color: var(--cafe); }
     .page { max-width: 640px; margin: 0 auto; padding: 0 0 3rem; }
-
+ 
     /* ── TOPBAR ── */
     .topbar { display: flex; align-items: center; justify-content: space-between; padding: 1.75rem 1.5rem 0; animation: fadeUp 0.4s ease both; }
     .logo { display: flex; align-items: center; text-decoration: none; }
     .badge-top { font-size: 10px; font-weight: 500; color: var(--azul-mid); background: #EAF1F8; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.04em; text-transform: uppercase; border: 1px solid rgba(46,95,138,0.2); }
-
+ 
     /* ── HERO ── */
     .hero { margin: 1.5rem 1.25rem 0; background: var(--azul); border-radius: 22px; padding: 3rem 2rem 2.75rem; text-align: center; position: relative; overflow: hidden; animation: fadeUp 0.4s ease 0.1s both; }
     .hero::before { content: ''; position: absolute; top: -80px; right: -80px; width: 260px; height: 260px; border-radius: 50%; background: radial-gradient(circle, rgba(192,57,43,0.2) 0%, transparent 70%); }
@@ -44,7 +44,7 @@
     .hero-cta:hover { background: var(--rojo-d); transform: translateY(-2px); }
     .pago-hint { margin-top: 1.1rem; font-size: 12px; color: rgba(255,255,255,0.38); }
     .pago-hint strong { color: var(--cafe-light); font-weight: 500; }
-
+ 
     /* ── PAGO BAR ── */
     .pago-bar { margin: 1.25rem 1.25rem 0; background: var(--rojo); border-radius: 14px; padding: 1.1rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 12px; animation: fadeUp 0.4s ease 0.15s both; }
     .pb-left { display: flex; align-items: center; gap: 10px; }
@@ -53,11 +53,11 @@
     .pb-sub  { font-size: 11px; font-weight: 300; color: rgba(255,255,255,0.65); }
     .pb-monto { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400; color: #fff; white-space: nowrap; text-align: right; line-height: 1.1; }
     .pb-monto small { font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 300; display: block; color: rgba(255,255,255,0.6); letter-spacing: 0.05em; }
-
+ 
     /* ── SECCIÓN ── */
     .section { padding: 1.75rem 1.25rem 0; animation: fadeUp 0.4s ease 0.2s both; }
     .section-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 300; color: var(--cafe); margin-bottom: 1rem; letter-spacing: 0.02em; }
-
+ 
     /* ── BENEFICIOS ── */
     .beneficios-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
     .bene { background: var(--blanco); border: 1px solid #E8DDD4; border-radius: 14px; padding: 1.25rem 1rem; transition: border-color 0.2s, transform 0.2s; }
@@ -65,12 +65,45 @@
     .bene-icon { font-size: 20px; margin-bottom: 8px; display: block; }
     .bene h3 { font-size: 13px; font-weight: 500; color: var(--cafe); margin-bottom: 4px; }
     .bene p  { font-size: 12px; color: var(--muted); line-height: 1.5; }
-
-    /* ── AVISO ── */
-    .aviso { background: var(--rojo-bg); border: 1.5px solid rgba(192,57,43,0.25); border-radius: 14px; padding: 1rem 1.1rem; margin: 1.25rem 1.25rem 0; display: flex; gap: 10px; align-items: flex-start; animation: fadeUp 0.4s ease 0.22s both; }
-    .aviso p { font-size: 12px; color: var(--rojo-d); line-height: 1.65; font-weight: 300; }
-    .aviso p strong { font-weight: 500; color: var(--rojo); }
-
+ 
+    /* ── AVISO MEJORADO ── */
+    .aviso {
+      margin: 1.25rem 1.25rem 0;
+      border-radius: 16px; overflow: hidden;
+      animation: fadeUp 0.4s ease 0.22s both;
+      box-shadow: 0 2px 16px rgba(192,57,43,0.08);
+    }
+    .aviso-header {
+      background: var(--rojo);
+      padding: 0.85rem 1.25rem;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .aviso-header span { font-size: 16px; }
+    .aviso-header h3 { font-size: 13px; font-weight: 500; color: #fff; letter-spacing: 0.02em; }
+    .aviso-body {
+      background: var(--rojo-bg);
+      border: 1.5px solid rgba(192,57,43,0.2);
+      border-top: none;
+      padding: 1.1rem 1.25rem;
+    }
+    .aviso-body p { font-size: 13px; color: #6B1A12; line-height: 1.7; font-weight: 300; }
+    .aviso-body p strong { font-weight: 500; color: var(--rojo); }
+    .aviso-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+    .aviso-tag { background: #fff; border: 1px solid rgba(192,57,43,0.25); color: var(--rojo-d); font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 20px; }
+ 
+    /* ── VIDEO BADGE ── */
+    .video-badge {
+      margin: 1rem 1.25rem 0;
+      background: var(--azul);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      display: flex; gap: 12px; align-items: center;
+      animation: fadeUp 0.4s ease 0.24s both;
+    }
+    .video-badge .vb-icon { font-size: 24px; min-width: 30px; }
+    .video-badge p { font-size: 12px; color: rgba(255,255,255,0.8); line-height: 1.6; font-weight: 300; }
+    .video-badge p strong { color: #fff; font-weight: 500; }
+ 
     /* ── CÓMO FUNCIONA ── */
     .como { background: var(--cafe-bg); border: 1.5px solid #D9C4B0; border-radius: 20px; padding: 2rem 1.75rem; margin: 1.25rem 1.25rem 0; animation: fadeUp 0.4s ease 0.25s both; }
     .como .section-title { color: var(--cafe); margin-bottom: 1.5rem; }
@@ -79,7 +112,21 @@
     .paso-num { width: 28px; height: 28px; min-width: 28px; border-radius: 50%; border: 1px solid var(--cafe-light); color: var(--cafe-mid); font-size: 12px; font-weight: 500; font-family: 'Cormorant Garamond', serif; display: flex; align-items: center; justify-content: center; }
     .paso-text h4 { font-size: 13px; font-weight: 500; color: var(--cafe); margin-bottom: 3px; }
     .paso-text p  { font-size: 12px; color: var(--muted); line-height: 1.55; font-weight: 300; }
-
+ 
+    /* ── CONFIANZA ── */
+    .confianza {
+      margin: 1.25rem 1.25rem 0;
+      background: linear-gradient(135deg, #1A3A5C 0%, #2E5F8A 100%);
+      border-radius: 16px; padding: 1.5rem 1.5rem;
+      animation: fadeUp 0.4s ease 0.28s both;
+    }
+    .confianza-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 300; color: #fff; margin-bottom: 1rem; text-align: center; }
+    .confianza-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .conf-item { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 0.8rem; display: flex; gap: 8px; align-items: flex-start; }
+    .conf-check { font-size: 14px; min-width: 20px; }
+    .conf-item strong { display: block; font-size: 12px; font-weight: 500; color: #fff; margin-bottom: 2px; }
+    .conf-item p { font-size: 11px; color: rgba(255,255,255,0.6); line-height: 1.4; }
+ 
     /* ── PRIVACIDAD ── */
     .priv-wrap { padding: 1.75rem 1.25rem 0; animation: fadeUp 0.4s ease 0.3s both; }
     .privacidad { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 1rem; }
@@ -87,7 +134,7 @@
     .priv-dot { width: 6px; height: 6px; min-width: 6px; border-radius: 50%; background: var(--azul-mid); margin-top: 4px; }
     .priv-item strong { display: block; font-size: 12px; font-weight: 500; color: var(--cafe); margin-bottom: 2px; }
     .priv-item p { font-size: 11px; color: var(--muted); line-height: 1.4; }
-
+ 
     /* ── CTA FINAL ── */
     .cta-final { margin: 1.5rem 1.25rem 0; background: var(--azul); border-radius: 20px; padding: 2rem; text-align: center; animation: fadeUp 0.4s ease 0.35s both; }
     .cta-final h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 300; color: #fff; margin-bottom: 0.4rem; }
@@ -95,16 +142,17 @@
     .cta-final p { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 1.25rem; font-weight: 300; }
     .cta-final a { display: inline-block; background: var(--rojo); color: #fff; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; padding: 13px 34px; border-radius: 4px; text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.2s; }
     .cta-final a:hover { background: var(--rojo-d); }
-
+ 
     /* ── FOOTER ── */
     footer { text-align: center; font-size: 11px; color: var(--muted); line-height: 1.9; padding: 1.75rem 1.25rem 0; font-weight: 300; }
     footer a { color: var(--cafe-mid); text-decoration: none; }
     .slogan-footer { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 13px; color: var(--cafe-mid); margin-bottom: 5px; }
     hr.div { border: none; border-top: 1px solid #E8DDD4; margin: 1.75rem 1.25rem 0; }
-
+ 
     @media (max-width: 480px) {
       .hero h1 { font-size: 2.2rem; }
       .privacidad { grid-template-columns: 1fr; }
+      .confianza-grid { grid-template-columns: 1fr; }
       .pb-monto { font-size: 1.5rem; }
       .badge-top { display: none; }
     }
@@ -112,47 +160,49 @@
 </head>
 <body>
 <div class="page">
-
-  <!-- TOPBAR con logo nodos rojo+azul -->
+ 
+  <!-- TOPBAR con logo recreado -->
   <div class="topbar">
     <a href="#" class="logo">
       <svg width="140" height="52" viewBox="0 0 140 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-        <!-- ── O con nodos conectados ── -->
-        <!-- Círculo O azul grueso -->
-        <circle cx="24" cy="26" r="21" stroke="#1A3A5C" stroke-width="4.5" fill="none"/>
-        <!-- Círculo interior concéntrico fino -->
-        <circle cx="24" cy="26" r="13" stroke="#1A3A5C" stroke-width="1.2" fill="none" opacity="0.3"/>
-
-        <!-- Líneas de conexión entre nodos (color salmón/naranja como en el original) -->
-        <line x1="10" y1="32" x2="24" y2="10" stroke="#C0392B" stroke-width="1.2" opacity="0.7"/>
-        <line x1="10" y1="32" x2="38" y2="38" stroke="#C0392B" stroke-width="1.2" opacity="0.7"/>
-        <line x1="24" y1="10" x2="38" y2="38" stroke="#C0392B" stroke-width="1.2" opacity="0.7"/>
-
-        <!-- Nodo izquierdo (dentro de la O) -->
-        <circle cx="10" cy="32" r="4" fill="#C0392B"/>
-        <circle cx="10" cy="32" r="2" fill="white"/>
-
-        <!-- Nodo superior (en el borde de la O) -->
-        <circle cx="24" cy="10" r="4" fill="#C0392B"/>
-        <circle cx="24" cy="10" r="2" fill="white"/>
-
-        <!-- Nodo derecho (fuera, conectando a las letras) -->
-        <circle cx="38" cy="38" r="3" fill="#C0392B" opacity="0.6"/>
-
-        <!-- ── LETRAS "lin" ── -->
-        <!-- l azul -->
-        <text x="52" y="42" font-family="DM Sans, sans-serif" font-size="34" font-weight="400" fill="#1A3A5C" letter-spacing="-1">l</text>
-        <!-- i azul -->
-        <text x="65" y="42" font-family="DM Sans, sans-serif" font-size="34" font-weight="400" fill="#1A3A5C" letter-spacing="-1">i</text>
-        <!-- n rojo -->
-        <text x="78" y="42" font-family="DM Sans, sans-serif" font-size="34" font-weight="400" fill="#C0392B" letter-spacing="-1">n</text>
-
+ 
+        <!-- ── O grande azul con doble anillo ── -->
+        <!-- Anillo exterior -->
+        <circle cx="24" cy="26" r="23" stroke="#1A3A5C" stroke-width="3.5" fill="none"/>
+        <!-- Anillo interior -->
+        <circle cx="24" cy="26" r="14" stroke="#1A3A5C" stroke-width="1.8" fill="none"/>
+ 
+        <!-- Nodo 1: izquierdo-centro (dentro de la O) -->
+        <circle cx="15" cy="28" r="4" fill="#C0392B"/>
+        <circle cx="15" cy="28" r="2" fill="#E8A090"/>
+ 
+        <!-- Nodo 2: arriba-derecha (en el borde de la O, conectando con la l) -->
+        <circle cx="33" cy="12" r="4" fill="#C0392B"/>
+        <circle cx="33" cy="12" r="2" fill="#E8A090"/>
+ 
+        <!-- Líneas de conexión entre nodos (red neuronal) -->
+        <line x1="15" y1="28" x2="33" y2="12" stroke="#C4956A" stroke-width="1.2" opacity="0.7"/>
+        <line x1="33" y1="12" x2="55" y2="26" stroke="#C4956A" stroke-width="1.2" opacity="0.5"/>
+        <line x1="15" y1="28" x2="55" y2="38" stroke="#C4956A" stroke-width="1" opacity="0.4"/>
+ 
+        <!-- ── l azul ── -->
+        <line x1="50" y1="6" x2="50" y2="48" stroke="#1A3A5C" stroke-width="4" stroke-linecap="round"/>
+ 
+        <!-- ── i azul ── -->
+        <!-- punto de la i -->
+        <circle cx="66" cy="8" r="3.5" fill="#1A3A5C"/>
+        <!-- cuerpo de la i -->
+        <line x1="66" y1="16" x2="66" y2="48" stroke="#1A3A5C" stroke-width="4" stroke-linecap="round"/>
+ 
+        <!-- ── n azul ── -->
+        <line x1="79" y1="18" x2="79" y2="48" stroke="#1A3A5C" stroke-width="4" stroke-linecap="round"/>
+        <path d="M79 24 Q96 6 113 24 L113 48" stroke="#1A3A5C" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+ 
       </svg>
     </a>
     <div class="badge-top">Programa de participantes — México</div>
   </div>
-
+ 
   <!-- HERO -->
   <div class="hero">
     <div class="hero-badge">Convocatoria abierta · 2026</div>
@@ -160,7 +210,7 @@
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSeg8LWN77qZR5nECbhvyQ09xKNzLskssot5tLicHI40z0zhMw/viewform" target="_blank" class="hero-cta">Quiero participar</a>
     <div class="pago-hint">Pago de <strong>$70 a $90 MXN</strong> por hora de sesión</div>
   </div>
-
+ 
   <!-- PAGO BAR -->
   <div class="pago-bar">
     <div class="pb-left">
@@ -172,25 +222,44 @@
     </div>
     <div class="pb-monto">$70–$90<small>MXN / hora</small></div>
   </div>
-
+ 
   <!-- POR QUÉ PARTICIPAR -->
   <div class="section">
     <div class="section-title">¿Por qué participar?</div>
     <div class="beneficios-grid">
-      <div class="bene"><span class="bene-icon">💸</span><h3>Ingresos reales</h3><p>Gana por hora sin salir de casa.</p></div>
+      <div class="bene"><span class="bene-icon">💸</span><h3>Ingresos reales</h3><p>Gana por hora sin salir de casa ni cambiar tu rutina.</p></div>
       <div class="bene"><span class="bene-icon">🤖</span><h3>Impacto real</h3><p>Tus datos entrenan robots que mejorarán vidas.</p></div>
-      <div class="bene"><span class="bene-icon">🏠</span><h3>Desde tu hogar</h3><p>Participas en tu espacio cotidiano.</p></div>
-      <div class="bene"><span class="bene-icon">🔒</span><h3>100% transparente</h3><p>Sabes qué datos se recolectan y cómo se usan.</p></div>
+      <div class="bene"><span class="bene-icon">🏠</span><h3>Desde tu hogar</h3><p>Participas en tu espacio cotidiano, cómodamente.</p></div>
+      <div class="bene"><span class="bene-icon">🔒</span><h3>100% transparente</h3><p>Contrato claro. Sabes exactamente qué se recolecta.</p></div>
     </div>
   </div>
-
-  <!-- AVISO — texto actualizado -->
+ 
+  <!-- AVISO MEJORADO -->
   <div class="aviso">
-    <span style="font-size:18px; min-width:24px;">👐</span>
-    <p>Buscamos personas que hagan <strong>quehaceres activos en casa</strong>: lavar, barrer, cocinar, trapear, haciendo hobbies como pintar, coser, etc. Recolectamos <strong>movimientos de manos y cuerpo</strong> — no basta con estar sentado. Para la foto usa el lente <strong>0.5× (wide)</strong> de tu celular.</p>
+    <div class="aviso-header">
+      <span>👐</span>
+      <h3>¿A quién buscamos?</h3>
+    </div>
+    <div class="aviso-body">
+      <p>Buscamos personas que hagan <strong>quehaceres activos en casa</strong> y hobbies con las manos: lavar, barrer, cocinar, trapear, pintar, coser y más. Recolectamos <strong>movimientos de manos y cuerpo</strong> — no basta con estar sentado. Para la foto usa el lente <strong>0.5× (wide)</strong> de tu celular.</p>
+      <div class="aviso-tags">
+        <span class="aviso-tag">🍽️ Lavar trastes</span>
+        <span class="aviso-tag">🧹 Barrer · Trapear</span>
+        <span class="aviso-tag">🍳 Cocinar</span>
+        <span class="aviso-tag">🎨 Pintar</span>
+        <span class="aviso-tag">🧵 Coser</span>
+        <span class="aviso-tag">👕 Lavar ropa</span>
+      </div>
+    </div>
   </div>
-
-  <!-- CÓMO FUNCIONA — paso 1 sin "Te contactamos en menos de 48 horas" -->
+ 
+  <!-- VIDEO BADGE -->
+  <div class="video-badge">
+    <div class="vb-icon">🎥</div>
+    <p><strong>¿Cómo se recolectan los datos?</strong> Usarás una diadema y una cámara que captura los movimientos de tu cuerpo y manos mientras realizas tus actividades. No se graba audio. Todo queda protegido bajo contrato.</p>
+  </div>
+ 
+  <!-- CÓMO FUNCIONA -->
   <div class="como">
     <div class="section-title">¿Cómo funciona?</div>
     <div class="paso">
@@ -210,7 +279,20 @@
       <div class="paso-text"><h4>Cobras por tus horas</h4><p>Al finalizar cada sesión verificada, recibes tu pago puntualmente.</p></div>
     </div>
   </div>
-
+ 
+  <!-- BLOQUE DE CONFIANZA -->
+  <div class="confianza">
+    <div class="confianza-title">¿Por qué puedes confiar en Olin?</div>
+    <div class="confianza-grid">
+      <div class="conf-item"><span class="conf-check">✓</span><div><strong>Contrato firmado</strong><p>Antes de iniciar, todo por escrito y claro.</p></div></div>
+      <div class="conf-item"><span class="conf-check">✓</span><div><strong>Sin audio</strong><p>Solo movimiento. Tu privacidad 100% protegida.</p></div></div>
+      <div class="conf-item"><span class="conf-check">✓</span><div><strong>Pago puntual</strong><p>Recibes tu pago al terminar cada sesión.</p></div></div>
+      <div class="conf-item"><span class="conf-check">✓</span><div><strong>Retiro libre</strong><p>Puedes salir del programa cuando quieras.</p></div></div>
+      <div class="conf-item"><span class="conf-check">✓</span><div><strong>LFPDPPP</strong><p>Cumplimos la ley de protección de datos de México.</p></div></div>
+      <div class="conf-item"><span class="conf-check">✓</span><div><strong>Tú decides</strong><p>Consentimiento explícito antes de cada sesión.</p></div></div>
+    </div>
+  </div>
+ 
   <!-- PRIVACIDAD -->
   <div class="priv-wrap">
     <div class="section-title">Tu privacidad, nuestra prioridad</div>
@@ -221,22 +303,22 @@
       <div class="priv-item"><div class="priv-dot"></div><div><strong>Puedes retirarte</strong><p>En cualquier momento sin penalización.</p></div></div>
     </div>
   </div>
-
+ 
   <!-- CTA FINAL -->
   <div class="cta-final">
     <h3>¿Listo para<br><em>empezar?</em></h3>
     <p>Regístrate en menos de 3 minutos. Sin compromisos.</p>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSeg8LWN77qZR5nECbhvyQ09xKNzLskssot5tLicHI40z0zhMw/viewform" target="_blank">Llenar formulario →</a>
   </div>
-
+ 
   <hr class="div"/>
-
+ 
   <footer>
     <div class="slogan-footer">"Lo que haces hoy, enseña al mundo de mañana."</div>
     Olin · Ciudad de México · <a href="mailto:contacto@olin.mx">contacto@olin.mx</a><br>
     Aviso de privacidad conforme a la LFPDPPP · 2026
   </footer>
-
+ 
 </div>
 </body>
 </html>
